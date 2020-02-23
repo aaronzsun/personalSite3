@@ -38,7 +38,7 @@ section{
 
 #vanta {
 	width: 100%;
-	min-height: 500vh;
+	min-height: 460vh;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -351,6 +351,13 @@ section{
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
+#song {
+	font-size: 20px;
+	margin-top: 150px;
+	margin-bottom: 30px;
+}
+
+
 @media (max-width: 800px){
 	.content-4 h1{
 		font-size: 30px;
@@ -359,9 +366,30 @@ section{
 }
 
 @media (max-width: 700px){
+	.content-2{
+		position: relative;
+		min-height: 60vh;
+		background-color: transparent;
+		text-align: left;
+	}
+
+	.content-3{
+		position: relative;
+		min-height: 60vh;
+		background-color: transparent;
+		text-align: left;
+	}
+
+	.content-4{
+		position: relative;
+		min-height: 60vh;
+		background-color: transparent;
+		text-align: left;
+	}
+
 	#vanta {
 		width: 100%;
-		min-height: 300vh;
+		min-height: 250vh;
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
@@ -421,6 +449,7 @@ section{
 		font-size: 16px;
 		line-height: 20px;
 	}
+
 
 	/* section 4 */
 
