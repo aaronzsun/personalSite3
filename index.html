@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aaron Sun</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+
+</head>
+
+<body>
+	<div id="vanta">
+		<section class="content-1">
+			<h1 id="header">Hi, I'm Aaron.</h1>
+			<div id="subheaderlinks">
+				<div id="men1" onclick=showAbout()><a>About</a></div>
+				<div id="men2" onclick=showResume()><a>Resume</a></div>
+				<div id="men3" onclick=showProjects()><a>Projects</a></div>
+			</div>
+		</section>
+	
+		<section class="content-2">
+			<div id="content-2-body">
+				<img src="/assets/img/profile.png" alt="profile" id="profilePic">
+				<div id="aboutMe">
+					<div id="aboutMe-spacer"></div>
+					<p id="aboutMe-text2"> Hi, my name is Aaron Sun! </p> <br>
+					<p id="aboutMe-text"> I'm a Vegas native born in Pasadena, California. 
+						Currently, I'm a first-year student at Harvard University majoring in Applied Mathematics and 
+						Computer Science and minoring in Economics. I'm interested in UI/UX design, data analytics, and
+						software engineering. Outside of class, I'm a full stack software engineer, analyst, and amateur
+						web designer. <br> <br> Scroll down to check out some of the work I've done!
+					</p>
+				<div id="aboutMe-links">
+					<a href="https://www.linkedin.com/in/aaronzsun/"><img src="/assets/img/linkedin.png" id="aboutMe-img"></a>
+					<a href="https://github.com/aaronzsun"><img src="/assets/img/github.png" id="aboutMe-img"></a>
+					<a href="https://www.facebook.com/profile.php?id=100005968875484"><img src="/assets/img/facebook.png" id="aboutMe-img"></a>
+					<a href="https://www.instagram.com/aaronzsun/"><img src="/assets/img/instagram.png" id="aboutMe-img"></a>
+					<a href="mailto:aaronsun2001@gmail.com"><img src="/assets/img/gmail.png" id="aboutMe-img"></a>
+				</div>
+			</div>
+		</section>
+	
+		<section class="content-3">
+			<h1>Here's where I've worked.</h1>
+			<div id="accordian1" onclick="toggle1()">
+				<img src="/assets/img/dropdown.png" id="downarrow1">
+				<h2 id="panelTitle">Pakira Inc.<p id="panelRole">Software Engineer</p></h1>
+				<div id="panel1" style="display:none">
+					<p id="content-3-text"> I am currently developing the full stack for Pakira.com, an online 
+						commodity trading marketplace created to automate business to business transactions in an 
+						industry valued at over $20 trillion. </p>
+				</div>
+			</div>
+			<div id="accordian2" onclick="toggle2()">
+				<img src="/assets/img/dropdown.png" id="downarrow2">
+				<h2 id="panelTitle">Harvard Consulting on Business and the Environment<p id="panelRole">Analyst</p></h1>
+				<div id="panel2" style="display:none">
+					<p id="content-3-text">I am currently a quantitative analyst and consultant for Harvard’s premier 
+						strategy consulting group, Harvard CBE, with previous clients including Amazon, Microsoft, and 
+						Pfizer. </p>
+				</div>
+			</div>
+			<div id="accordian3" onclick="toggle3()">
+				<img src="/assets/img/dropdown.png" id="downarrow3">
+				<h2 id="panelTitle">James Lab, University of Nevada Las Vegas<p id="panelRole">Research Intern</p></h1>
+				<div id="panel3" style="display:none">
+					<p id="content-3-text"> I worked on a USBR grant to design Lake Arrowhead's wastewater
+						recycling system. I wrote R scripts that analyzed over 80 million points of environmental
+						data. </p>
+				</div>
+			</div>
+		<section class="content-4">
+			<h1>Check out my projects!</h1>
+			<div id="project1container">
+				<img src="assets/img/ml.png" id="ml">
+				<div id="project1">
+					<div id="project1-spacer"></div>
+					<p id="project-header"> ML Algorithm Visualizer 
+						<a id="projlinks" target="_blank" href="https://github.com/aaronzsun/ml-visualizer">[GitHub]</a>
+						<a id="projlinks" target="_blank" href="https://devpost.com/software/ml-algorithm-visualizer">[DevPost]</a>
+					</p>
+ 					<p id="project-text"> Won best use of data visualization and Most Sustainable Hack at TreeHacks2020. 
+						 Created using React, Python, and Plotly.
+					 </p>
+				</div>
+			</div>
+			<div id="project2container">
+				<img src="assets/img/hub.png" id="hub">
+				<div id="project2">
+					<div id="project2-spacer"></div>
+					<p id="project-header"> Hub: An Aggregated Social Network
+						<a id="projlinks" target="_blank" href="https://github.com/aaronzsun/hub">[GitHub]</a>
+					</p>
+ 					<p id="project-text"> Fully functional aggregating social network created by CS50's final project.
+					 </p>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+
+	<script src="script.js"></script>
+	<script src="typeit.min.js"></script>
+	<script src="three.r95.min.js"></script>
+	<script src="vanta.birds.min.js"></script>
+	<script>
+		VANTA.BIRDS({
+		el: "#vanta",
+		mouseControls: true,
+		touchControls: true,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00,
+		backgroundColor: 0xf5f5f5,
+		color1: 0x5e797f,
+		color2: 0x4a7a84,
+		birdSize: 0.70,
+		wingSpan: 33.00,
+		speedLimit: 2.00,
+		separation: 60.00,
+		quantity: 4.00
+		})
+	</script>
+</body>
+
+</html>
