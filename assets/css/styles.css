@@ -358,6 +358,21 @@ section{
 }
 
 @media (max-width: 700px){
+	#vanta {
+		width: 100%;
+		min-height: 300vh;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+	}
+
+	.content-3{
+		position: relative;
+		min-height: 100vh;
+		background-color: transparent;
+		text-align: left;
+	}
+
 	#accordian1,#accordian2,#accordian3 {
 		width: 500px;
 	}
