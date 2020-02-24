@@ -38,11 +38,11 @@ section{
 
 #vanta {
 	width: 100%;
-	min-height: 460vh;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
 }
+
 
 /*----------------
  	Content Section
