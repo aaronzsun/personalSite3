@@ -1,21 +1,6 @@
 var myVar;
 var spotify = document.getElementById('spotify-div')
 
-window.onscroll = function() {scroll()};
-
-function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-if (!isMobile()) {
-  function scroll() {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-      spotify.style.display = "block";
-    }
-  }  
-}
-
-
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
