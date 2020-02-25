@@ -1,6 +1,42 @@
+var myVar;
+var spotify = document.getElementById('spotify-div')
+
+window.onscroll = function() {scroll()};
+
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+if (!isMobile()) {
+  function scroll() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      spotify.style.display = "block";
+    }
+  }  
+}
+
+
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
+
+function preloader() {
+  myVar = setTimeout(removeloader, 2000);
+}
+
+function removeloader() {
+  document.getElementById("preloaderel").style.opacity="0%";
+  myVar = setTimeout(showPage, 500)
+}
+
+function showPage() {
+  document.getElementById("preloader").style.width = "0";
+  myVar = setTimeout(removedisplay, 2000)
+}
+
+function removedisplay() {
+  document.getElementById("preloader").style.display = "none";
+}
 
 function showAbout(){
   document.querySelector('.content-2').scrollIntoView({ 
@@ -28,7 +64,6 @@ function toggle1(){
     acc.style.height="200px"
     pan.style.display="block"
     icon.style.opacity="50%";
-    icon.style.rotate="180";
   }
   else {
     acc.style.height="100px"
@@ -42,7 +77,7 @@ function toggle2(){
   var pan = document.getElementById("panel2")
   var icon = document.getElementById("downarrow2")
   if (pan.style.display=="none"){
-    acc.style.height="200px"
+    acc.style.height="240px"
     pan.style.display="block"
     icon.style.opacity="50%";
   }

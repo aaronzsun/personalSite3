@@ -14,9 +14,17 @@
 
 </head>
 
-<body>
-	
-	<div id="vanta">
+<body onload=preloader()> 
+	<div id="preloader">
+		<span id="preloaderel" class="loader">
+			<span class="loader-inner"></span>
+		</span>
+	</div>
+	<div id="vanta"></div>
+	<div id="spotify-div">
+		<p id="spotify-text"> My favorite song right now: </p>
+		<iframe id="spotify" src="https://open.spotify.com/embed/track/48XkVAagIoQHCsOlJtXUd5" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+	</div>
 		<section class="content-1">
 			<h1 id="header">Hi, I'm Aaron.</h1>
 			<div id="subheaderlinks">
@@ -32,7 +40,7 @@
 				<div id="aboutMe">
 					<div id="aboutMe-spacer"></div>
 					<p id="aboutMe-text2"> Hi, my name is Aaron Sun! </p> <br>
-					<p id="aboutMe-text"> I'm a Vegas native born in Pasadena, California. 
+					<p id="aboutMe-text"> I'm from Las Vegas, but originally from California.
 						Currently, I'm a first-year student at Harvard University majoring in Applied Mathematics and 
 						Computer Science and minoring in Economics. I'm interested in UI/UX design, data analytics, and
 						software engineering. Outside of class, I'm a full stack software engineer, analyst, and amateur
@@ -65,7 +73,7 @@
 				<div id="panel2" style="display:none">
 					<p id="content-3-text">I am currently a quantitative analyst and consultant for Harvard’s premier 
 						strategy consulting group, Harvard CBE, with previous clients including Amazon, Microsoft, and 
-						Pfizer. </p>
+						Pfizer. Right now, I'm on a consulting case for a Fortune 500 company. </p>
 				</div>
 			</div>
 			<div id="accordian3" onclick="toggle3()">
@@ -77,6 +85,7 @@
 						data. </p>
 				</div>
 			</div>
+		</section>
 		<section class="content-4">
 			<h1>Check out my projects!</h1>
 			<div id="project1container">
@@ -102,15 +111,11 @@
  					<p id="project-text"> Fully functional aggregating social network created for CS50's final project.
 					 </p>
 				</div>
-			</div>
-			<h1 id="song">My favorite song right now! (check your volume)</h1>
-			<iframe id="spotify" src="https://open.spotify.com/embed/track/48XkVAagIoQHCsOlJtXUd5" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			</div>			
 		</section>
-	</div>
 	
 
 	<script src="script.js"></script>
-	<script src="typeit.min.js"></script>
 	<script src="three.r95.min.js"></script>
 	<script src="vanta.birds.min.js"></script>
 	<script>
@@ -125,10 +130,10 @@
 		backgroundColor: 0xf5f5f5,
 		color1: 0x5e797f,
 		color2: 0x4a7a84,
-		birdSize: 0.70,
+		birdSize: 1.0,
 		wingSpan: 33.00,
 		speedLimit: 2.00,
-		separation: 60.00,
+		separation: 40.00,
 		quantity: 4.00
 		})
 	</script>
