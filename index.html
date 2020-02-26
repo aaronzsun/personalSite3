@@ -8,10 +8,9 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
 	<script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
-
 </head>
 
 <body onload=preloader()> 
@@ -21,8 +20,14 @@
 		</span>
 	</div>
 	<div id="vanta"></div>
+	<div id="navbar">
+		<div id="navitem" onclick=showHome()>Home</div>
+		<div id="navitem" onclick=showAbout()>About</div>
+		<div id="navitem" onclick=showResume()>Resume</div>
+		<div id="navitem" onclick=showProjects()>Projects</div>
+	</div>
 		<section class="content-1">
-			<h1 id="header">Hi, I'm Aaron.</h1>
+			<h1 id="header">Aaron Sun</h1>
 			<div id="subheaderlinks">
 				<div id="men1" onclick=showAbout()><a>About</a></div>
 				<div id="men2" onclick=showResume()><a>Resume</a></div>
@@ -36,11 +41,11 @@
 				<div id="aboutMe">
 					<div id="aboutMe-spacer"></div>
 					<p id="aboutMe-text2"> Hi, my name is Aaron Sun! </p> <br>
-					<p id="aboutMe-text"> I'm from Las Vegas, but originally from California.
+					<p id="aboutMe-text"> I'm from Las Vegas, but originally born in California.
 						Currently, I'm a first-year student at Harvard University majoring in Applied Mathematics and 
 						Computer Science and minoring in Economics. I'm interested in UI/UX design, data analytics, and
-						software engineering. Outside of class, I'm a full stack software engineer, analyst, and amateur
-						web designer. <br> <br> Scroll down to check out some of the work I've done!
+						software engineering. Outside of class, I'm a full stack software engineer, analyst, and
+						web designer. <br> <br>  Feel free to reach out on any of my social media platforms.
 					</p>
 				<div id="aboutMe-links">
 					<a href="https://www.linkedin.com/in/aaronzsun/"><img src="/assets/img/linkedin.png" id="aboutMe-img"></a>
@@ -53,37 +58,38 @@
 		</section>
 	
 		<section class="content-3">
-			<h1>Here's where I've worked.</h1>
+			<h1>Resume</h1>
 			<div id="accordian1" onclick="toggle1()">
 				<img src="/assets/img/dropdown.png" id="downarrow1">
-				<h2 id="panelTitle">Pakira Inc.<p id="panelRole">Software Engineer</p></h1>
+				<h2 id="panelTitle">Pakira Inc.<p id="panelRole">Software Engineer (2020 - present)</p></h1>
 				<div id="panel1" style="display:none">
-					<p id="content-3-text"> I am currently developing the full stack for Pakira.com, an online 
+					<p id="content-3-text"> Currently, I'm developing the full stack for Pakira.com, an online 
 						commodity trading marketplace created to automate business to business transactions in an 
 						industry valued at over $20 trillion. </p>
 				</div>
 			</div>
 			<div id="accordian2" onclick="toggle2()">
 				<img src="/assets/img/dropdown.png" id="downarrow2">
-				<h2 id="panelTitle">Harvard Consulting on Business and the Environment<p id="panelRole">Analyst</p></h1>
+				<h2 id="panelTitle">Harvard Consulting on Business and the Environment<p id="panelRole">Analyst (2020 - present)</p></h1>
 				<div id="panel2" style="display:none">
-					<p id="content-3-text">I am currently a quantitative analyst and consultant for Harvard’s premier 
+					<p id="content-3-text"> Currently, I'm a quantitative analyst and consultant for Harvard’s premier 
 						strategy consulting group, Harvard CBE, with previous clients including Amazon, Microsoft, and 
 						Pfizer. Right now, I'm on a consulting case for a Fortune 500 company. </p>
 				</div>
 			</div>
 			<div id="accordian3" onclick="toggle3()">
 				<img src="/assets/img/dropdown.png" id="downarrow3">
-				<h2 id="panelTitle">James Lab, University of Nevada Las Vegas<p id="panelRole">Research Intern</p></h1>
+				<h2 id="panelTitle">James Lab, University of Nevada Las Vegas<p id="panelRole">Research Intern (2019) </p></h1>
 				<div id="panel3" style="display:none">
-					<p id="content-3-text"> I worked on a USBR grant to design Lake Arrowhead's wastewater
-						recycling system. I wrote R scripts that analyzed over 80 million points of environmental
-						data. </p>
+					<p id="content-3-text"> Last summer, I worked on a federal grant to design a water recycling
+						system for Lake Arrowhead in San Bernandino County. I led data collection and analytics, writing
+						scripts to analyze and visualize over 80 million points of environmental data.
+					</p>
 				</div>
 			</div>
 		</section>
 		<section class="content-4">
-			<h1>Check out my projects!</h1>
+			<h1>Projects</h1>
 			<div id="project1container">
 				<img src="assets/img/ml.png" id="ml">
 				<div id="project1">
@@ -111,7 +117,104 @@
 		</section>
 	
 
-	<script src="script.js"></script>
+	<script>
+		var myVar;
+		var spotify = document.getElementById('spotify-div')
+		var navbar = document.getElementById('navbar')
+
+		window.onscroll = function() {scroll()};
+
+		window.onbeforeunload = function () {
+			window.scrollTo(0, 0);
+		}
+		function preloader() {
+			myVar = setTimeout(removeloader, 1500);
+		}
+		function removeloader() {
+			document.getElementById("preloaderel").style.opacity="0%";
+			myVar = setTimeout(showPage, 500)
+		}
+		function showPage() {
+			document.getElementById("preloader").style.width = "0";
+			myVar = setTimeout(removedisplay, 2000)
+		}
+		function removedisplay() {
+			document.getElementById("preloader").style.display = "none";
+		}
+		function scroll() {
+			if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+				navbar.style.left = "2%";
+			} else {
+				navbar.style.left = "-5%";
+			}
+		}
+		function showHome(){
+			document.querySelector('.content-1').scrollIntoView({ 
+				behavior: 'smooth' 
+			});
+		}
+		function showAbout(){
+			document.querySelector('.content-2').scrollIntoView({ 
+				behavior: 'smooth' 
+			});
+		}
+		function showResume(){
+			document.querySelector('.content-3').scrollIntoView({ 
+				behavior: 'smooth' 
+			});
+		}
+		function showProjects(){
+			document.querySelector('.content-4').scrollIntoView({ 
+				behavior: 'smooth' 
+			});
+		}
+		function toggle1(){
+			var acc = document.getElementById("accordian1")
+			var pan = document.getElementById("panel1")
+			var icon = document.getElementById("downarrow1")
+			if (pan.style.display=="none"){
+				acc.style.height="200px"
+				pan.style.display="block"
+				icon.style.opacity="50%";
+			}
+			else {
+				acc.style.height="100px"
+				pan.style.display="none"
+				icon.style.opacity="100%"
+			}
+		}
+		function toggle2(){
+			var acc = document.getElementById("accordian2")
+			var pan = document.getElementById("panel2")
+			var icon = document.getElementById("downarrow2")
+			if (pan.style.display=="none"){
+				acc.style.height="235px"
+				pan.style.display="block"
+				icon.style.opacity="50%";
+			}
+			else {
+				acc.style.height="100px"
+				pan.style.display="none"
+				icon.style.opacity="100%"
+			}
+		}
+
+		function toggle3(){
+			var acc = document.getElementById("accordian3")
+			var pan = document.getElementById("panel3")
+			var icon = document.getElementById("downarrow3")
+			if (pan.style.display=="none"){
+				acc.style.height="235px"
+				pan.style.display="block"
+				icon.style.opacity="50%"
+			}
+			else {
+				acc.style.height="100px"
+				pan.style.display="none"
+				icon.style.opacity="100%"
+			}
+		}
+	</script>>
 	<script src="three.r95.min.js"></script>
 	<script src="vanta.birds.min.js"></script>
 	<script>
@@ -129,7 +232,7 @@
 		birdSize: 1.0,
 		wingSpan: 33.00,
 		speedLimit: 2.00,
-		separation: 40.00,
+		separation: 60.00,
 		quantity: 4.00
 		})
 	</script>
