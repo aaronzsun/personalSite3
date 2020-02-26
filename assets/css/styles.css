@@ -156,7 +156,7 @@ section{
 	transform: scale(1.1);
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
 	#navbar {
 		display: none;
 	}
