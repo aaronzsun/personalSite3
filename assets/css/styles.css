@@ -479,28 +479,28 @@ section{
 
 	.content-2{
 		position: relative;
-		min-height: 60vh;
+		min-height: 0vh;
 		background-color: transparent;
 		text-align: left;
 	}
 
 	.content-3{
 		position: relative;
-		min-height: 60vh;
+		min-height: 0vh;
 		background-color: transparent;
 		text-align: left;
 	}
 
 	.content-4{
 		position: relative;
-		min-height: 60vh;
+		min-height: 0vh;
 		background-color: transparent;
 		text-align: left;
 	}
 
 	#vanta {
 		width: 100%;
-		min-height: 200vh;
+		min-height: 0vh;
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
